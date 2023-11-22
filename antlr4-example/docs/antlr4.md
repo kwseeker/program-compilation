@@ -247,7 +247,7 @@ protected int stop;		//此词法符号在语句中的结束索引
   //RuleContext.java
   public class RuleContext implements RuleNode {
       public RuleContext parent;	//父节点
-      public int invokingState = -1;
+      public int invokingState = -1;	//与节点生成相关，只在节点生成时赋值，参考RuleContext构造器方法，todo
       ...
   }
   ```
@@ -258,7 +258,7 @@ protected int stop;		//此词法符号在语句中的结束索引
 
 Antlr4 提供了两种遍历语法树的方式：监听器模式（实现 Listener 接口属于这种方式）、访问者模式（实现 Visitor 接口属于这种方式）。
 
-**监听器模式**：
+##### 监听器模式
 
 为了将遍历树时触发的事件转化为监听器的调用,ANTLR运行库提供了 ParseTree-Walker 类。
 
@@ -266,11 +266,42 @@ ParseTreeWalker调用序列：TODO 代码中调试调用序列。
 
 只能按固定的顺序进行遍历。
 
-**访问器模式**：
+##### 访问器模式
 
 可以控制遍历语法分析树的过程。
 
 在命令行中加入`-visitor`选项可以指示ANTLR为一个语法生成访问器接口(visitor interface)，语法中的每条规则对应接口中的一个visit方法。
 
-TODO 代码中调试调用序列。
+**遍历规则**：
+
+参考 Calc.java。
+
+<img src="imgs/antlr4_parse_calc.png" style="zoom:80%;" />
+
+**实际遍历流程**：
+
+Antlr4 默认提供了`AbstractParseTreeVisitor`实现默认的遍历规则是**深度优先遍历且会遍历每一个节点**，参考 `public T visitChildren(RuleNode node)`方法，里面可以通过 `protected T aggregateResult(T aggregate, T nextResult)` 方法聚合此层遍历结果；
+
+自定义的 `ExprCalcEvalVisitor`其实是修改了遍历规则和聚合结果的行为，只关注需要用到的部分节点，比如处理 `expr ('*'|'/') expr ` 规则的 `MulDivContext` 会有3个子节点，中间的子节点仅用于判断算术类型不需要再遍历，两边的节点才是参与运算的节点才会继续深入遍历。
+
+源码很容易理解。
+
+```
+a=1*2+3*(4-1)
+^D
+visitAssign called
+visitAddSub called [16 6]
+visitMulDiv called [4 16 6]
+visitInt called [4 4 16 6]
+visitInt called [33 4 16 6]
+visitMulDiv called [36 16 6]
+visitInt called [4 36 16 6]
+visitParens called [33 36 16 6]
+visitAddSub called [26 33 36 16 6]
+visitInt called [4 26 33 36 16 6]
+visitInt called [36 26 33 36 16 6]
+a => 11
+```
+
+
 

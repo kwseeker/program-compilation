@@ -1,5 +1,5 @@
 // Generated from ArrayInit.g4 by ANTLR 4.13.1
-package top.kwseeker.antlr4.examples.arrayinit;
+package top.kwseeker.antlr4.examples.arrayinit.autogen;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;

@@ -1,5 +1,8 @@
 package top.kwseeker.antlr4.examples.arrayinit;
 
+import top.kwseeker.antlr4.examples.arrayinit.autogen.ArrayInitBaseListener;
+import top.kwseeker.antlr4.examples.arrayinit.autogen.ArrayInitParser;
+
 public class ShortToUnicodeString extends ArrayInitBaseListener {
     /** Translate { to " */
     @Override

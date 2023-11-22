@@ -2,6 +2,8 @@ package top.kwseeker.antlr4.examples.arrayinit;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+import top.kwseeker.antlr4.examples.arrayinit.autogen.ArrayInitLexer;
+import top.kwseeker.antlr4.examples.arrayinit.autogen.ArrayInitParser;
 
 public class Test {
     public static void main(String[] args) throws Exception {

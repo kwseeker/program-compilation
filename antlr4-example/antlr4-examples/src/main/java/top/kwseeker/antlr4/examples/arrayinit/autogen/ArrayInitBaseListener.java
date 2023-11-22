@@ -1,41 +1,41 @@
-// Generated from ExprSimple.g4 by ANTLR 4.13.1
-package top.kwseeker.antlr4.examples.calc;
+// Generated from ArrayInit.g4 by ANTLR 4.13.1
+package top.kwseeker.antlr4.examples.arrayinit.autogen;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link ExprSimpleListener},
+ * This class provides an empty implementation of {@link ArrayInitListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class ExprSimpleBaseListener implements ExprSimpleListener {
+public class ArrayInitBaseListener implements ArrayInitListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProg(ExprSimpleParser.ProgContext ctx) { }
+	@Override public void enterInit(ArrayInitParser.InitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProg(ExprSimpleParser.ProgContext ctx) { }
+	@Override public void exitInit(ArrayInitParser.InitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpr(ExprSimpleParser.ExprContext ctx) { }
+	@Override public void enterValue(ArrayInitParser.ValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpr(ExprSimpleParser.ExprContext ctx) { }
+	@Override public void exitValue(ArrayInitParser.ValueContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
