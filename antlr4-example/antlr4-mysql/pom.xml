@@ -12,9 +12,50 @@
     <artifactId>antlr4-mysql</artifactId>
 
     <properties>
+        <maven.plugin.validation>verbose</maven.plugin.validation>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <dialect.parser>mysql</dialect.parser>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-maven-plugin</artifactId>
+                <version>${antlr4.version}</version>
+                <!-- 官方文档写的很随意，没有什么详细配置信息，不过提供了help目标，可以用下面命令查看详细配置参数
+                    mvn antlr4:help -Ddetail=true -Dgoal=antlr4
+                -->
+                <executions>
+                    <execution>
+                        <id>antlr</id>
+                        <goals>
+                            <goal>antlr4</goal>
+                        </goals>
+                        <!-- configuration 全都无效? -->
+                        <configuration>
+                            <arguments>
+                                <argument>-package</argument>
+                                <argument>top.kwseeker.antlr4.mysql.autogen</argument>
+                            </arguments>
+                            <!--<sourceDirectory>${basedir}/src/main/antlr4/sources/${dialect.parser}/</sourceDirectory>-->
+                            <!--<libDirectory>${basedir}/src/main/antlr4/imports/${dialect.parser}/</libDirectory>-->
+                            <!--<outputDirectory>${project.build.directory}/generated-sources/antlr4</outputDirectory>-->
+                            <listener>false</listener>
+                            <visitor>true</visitor>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

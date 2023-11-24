@@ -90,6 +90,67 @@ Maven依赖：
 </dependency>
 ```
 
+maven插件（antlr4-maven-plugin）：
+
+测试发现插件配置项（configuration）无效，maven 3.9.5，antlr4-maven-plugin 4.13.1，暂不清楚原因。
+
+```shell
+# 官方文档并没有些详细的配置方法，单可以用下面的命令查询详细配置方法
+$ mvn antlr4:help -Ddetail=true -Dgoal=antlr4
+# 这里只展示了常用的参数：
+antlr4:antlr4
+  Parses ANTLR 4 grammar files *.g4 and transforms them into Java source files.
+
+  Available parameters:
+
+    arguments
+      A list of additional command line arguments to pass to the ANTLR tool.
+
+    excludes
+      A set of Ant-like exclusion patterns used to prevent certain files from
+      being processed. By default, this set is empty such that no files are
+      excluded.
+
+    generateTestSources (Default: false)
+      Specifies whether sources are added to the compile or test scope.
+      User property: antlr4.generateTestSources
+
+    includes
+      Provides an explicit list of all the grammars that should be included in
+      the generate phase of the plugin. Note that the plugin is smart enough to
+      realize that imported grammars should be included but not acted upon
+      directly by the ANTLR Tool.
+      A set of Ant-like inclusion patterns used to select files from the source
+      directory for processing. By default, the pattern **/*.g4 is used to
+      select grammar files.
+
+    libDirectory (Default: ${basedir}/src/main/antlr4/imports)
+      Specify location of imported grammars and tokens files.
+
+    listener (Default: true)
+      Generate parse tree listener interface and base class.
+      User property: antlr4.listener
+
+    options
+      A list of grammar options to explicitly specify to the tool. These options
+      are passed to the tool using the -D<option>=<value> syntax.
+
+    outputDirectory (Default:
+    ${project.build.directory}/generated-sources/antlr4)
+      Specify output directory where the Java files are generated.
+
+    sourceDirectory (Default: ${basedir}/src/main/antlr4)
+      The directory where the ANTLR grammar files (*.g4) are located.
+
+    treatWarningsAsErrors (Default: false)
+      Treat warnings as errors.
+      User property: antlr4.treatWarningsAsErrors
+
+    visitor (Default: false)
+      Generate parse tree visitor interface and base class.
+      User property: antlr4.visitor
+```
+
 ### 使用 Antlr4 接口实现自己的功能
 
 Lexer 和 Parser 使用 .g4 文件中定义的语法规则将"语句"转换成 语法树对象，Antlr 使用内建的遍历器访问生成的语法分析树，并为每个遍历时可能处罚的事件生成一个语法分析树监听器接口。
@@ -302,6 +363,10 @@ visitInt called [4 26 33 36 16 6]
 visitInt called [36 26 33 36 16 6]
 a => 11
 ```
+
+
+
+## 高级特性
 
 
 

@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+//antlr4 -no-listener -visitor -lib imports  -package top.kwseeker.antlr4.mysql.autogen -o ../java/top/kwseeker/antlr4/mysql/autogen MySQLStatement.g4grammar MySQLStatement;
 grammar MySQLStatement;
 
 import Comments, DDLStatement, TCLStatement, DCLStatement, RLStatement;
