@@ -24,7 +24,7 @@
 
 
 
-## Antlr4 SQL语法规则
+## Antlr4 SQL语法规则定义
 
 代码中解析的规则是 `execute`：
 
@@ -37,80 +37,9 @@ public ASTNode parse() {
 
 完整的SQL语法规则还是挺复杂的（5k多行），这里以select查询语句为例分析其语法规则定义:
 
-```antlr4
-//MySQLStatement.g4
-execute
-    : (select
-    ... 					//这里省略其他子规则
-    | delimiter
-    ) (SEMI_ EOF? | EOF)	//以“分号+0或1个EOF”、“EOF”结尾
-    | EOF
-    ;
+参考 antlr4-sql-rule.drawio。
 
-//Symbol.g4
-SEMI_:               ';';
-
-//DMLStatement.g4
-select
-    : queryExpression lockClauseList?
-    | queryExpressionParens
-    | selectWithInto
-    ;
-    
-queryExpression
-    : withClause? (queryExpressionBody | queryExpressionParens) orderByClause? limitClause?
-    ;
-
-//用于匹配 with 子句，
-withClause
-    : WITH RECURSIVE? cteClause (COMMA_ cteClause)*	//匹配 with recursive？ 不区分大小写
-    ;
-
-//匹配SQL关键字，这么写是为了不区分大小写
-WITH
-    : W I T H		//这里 W I T H 每个都是一个fragement，即不是词法符号，只是被其他词法规则使用
-    ;
-    
-//匹配 cte 子句，格式：cte_name [(col_name [, col_name] ...)] AS (subquery)
-//比如 cte1 AS (SELECT a, b FROM table1)
-cteClause
-    : identifier (LP_ columnNames RP_)? AS subquery		//LP_ 匹配 '(' ， RP_匹配 ')'
-    ;
-
-identifier
-    : IDENTIFIER_
-    | identifierKeywordsUnambiguous
-    | identifierKeywordsAmbiguous1RolesAndLabels
-    | identifierKeywordsAmbiguous2Labels
-    | identifierKeywordsAmbiguous3Roles
-    | identifierKeywordsAmbiguous4SystemVariables
-    | customKeyword
-    | DOUBLE_QUOTED_TEXT
-    | UNDERSCORE_CHARSET
-    | BQUOTA_STRING
-    ;
-
-IDENTIFIER_
-    : [A-Za-z_$0-9\u0080-\uFFFF]*?[A-Za-z_$\u0080-\uFFFF]+?[A-Za-z_$0-9\u0080-\uFFFF]*
-    | BQ_ ~'`'+ BQ_
-    ;
-
-lockClauseList
-    : lockClause+
-    ;
-    
-queryExpressionParens
-    : LP_ (queryExpressionParens | queryExpression lockClauseList?) RP_
-    ;
-    
-selectWithInto
-    : LP_ selectWithInto RP_
-    | queryExpression selectIntoExpression lockClauseList?
-    | queryExpression lockClauseList selectIntoExpression
-    ;
-```
-
-
+![](imgs/antlr4-sql-rule.drawio.png)
 
 ## MySQL SQL语法
 

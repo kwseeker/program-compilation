@@ -1,8 +1,12 @@
 package top.kwseeker.antlr4.mysql.sharding.parser.api;
 
+import top.kwseeker.antlr4.mysql.sharding.api.ASTNode;
 import top.kwseeker.antlr4.mysql.sharding.api.visitor.statement.SQLStatementVisitor;
+import top.kwseeker.antlr4.mysql.sharding.infra.database.DatabaseType;
+import top.kwseeker.antlr4.mysql.sharding.infra.database.mysql.MySQLDatabaseType;
 import top.kwseeker.antlr4.mysql.sharding.parser.core.ParseASTNode;
 import top.kwseeker.antlr4.mysql.sharding.parser.core.visitor.SQLStatementVisitorFactory;
+import top.kwseeker.antlr4.mysql.sharding.parser.core.visitor.SQLVisitorRule;
 import top.kwseeker.antlr4.mysql.sharding.parser.sql.statement.SQLStatement;
 
 /**
@@ -10,8 +14,16 @@ import top.kwseeker.antlr4.mysql.sharding.parser.sql.statement.SQLStatement;
  */
 public class SQLStatementVisitorEngine {
 
+    private final DatabaseType databaseType;
+
+    public SQLStatementVisitorEngine(DatabaseType databaseType) {
+        this.databaseType = databaseType;
+    }
+
     public SQLStatement visit(final ParseASTNode parseASTNode) {
-        SQLStatementVisitor visitor = SQLStatementVisitorFactory.newInstance();
-        return parseASTNode.getRootNode().accept(visitor);
+        SQLVisitorRule sqlVisitorRule = SQLVisitorRule.valueOf(parseASTNode.getRootNode().getClass());
+        SQLStatementVisitor visitor = SQLStatementVisitorFactory.newInstance(databaseType, sqlVisitorRule);
+        ASTNode sqlStatement = parseASTNode.getRootNode().accept(visitor);
+        return (SQLStatement) sqlStatement;
     }
 }
