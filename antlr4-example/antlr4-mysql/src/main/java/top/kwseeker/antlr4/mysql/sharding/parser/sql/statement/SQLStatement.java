@@ -4,5 +4,5 @@ import top.kwseeker.antlr4.mysql.sharding.api.ASTNode;
 
 public interface SQLStatement extends ASTNode {
 
-
+    int getParameterCount();
 }
