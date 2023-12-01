@@ -1,0 +1,404 @@
+<mxfile host="Electron" modified="2023-12-01T11:47:10.629Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" etag="l-FS5_qZd3G1a7g192vh" version="21.6.5" type="device">
+  <diagram name="第 1 页" id="Ph_wa5bQFctH6rdIdZy6">
+    <mxGraphModel dx="1231" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-80" value="&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&lt;b&gt;这里仅仅展示SELECT 语句语法定义&lt;/b&gt;，&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;下面是MySQL官网给的语法格式：&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;SELECT&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [ALL | DISTINCT | DISTINCTROW ]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [HIGH_PRIORITY]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [STRAIGHT_JOIN]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [SQL_SMALL_RESULT] [SQL_BIG_RESULT] [SQL_BUFFER_RESULT]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [SQL_NO_CACHE] [SQL_CALC_FOUND_ROWS]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; select_expr [, select_expr] ...&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [into_option]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [&lt;b&gt;FROM&lt;/b&gt; table_references&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; [PARTITION partition_list]]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [WHERE where_condition]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [GROUP BY {col_name | expr | position}, ... [WITH ROLLUP]]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [HAVING where_condition]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [WINDOW window_name AS (window_spec)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [, window_name AS (window_spec)] ...]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [ORDER BY {col_name | expr | position}&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; [ASC | DESC], ... [WITH ROLLUP]]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [LIMIT {[offset,] row_count | row_count OFFSET offset}]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [into_option]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [FOR {UPDATE | SHARE}&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [OF tbl_name [, tbl_name] ...]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [NOWAIT | SKIP LOCKED]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; | LOCK IN SHARE MODE]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; [into_option]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;into_option: {&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; INTO OUTFILE &#39;file_name&#39;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; [CHARACTER SET charset_name]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; export_options&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; | INTO DUMPFILE &#39;file_name&#39;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;&amp;nbsp; | INTO var_name [, var_name] ...&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;}&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="10" y="260" width="420" height="505" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-1" value="&lt;h1 style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Antlr4 SQL语法规则定义&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;规则来自 ShardingSphere 中的MySQL SQL语法规则，不一定需要这么定义，也可以参考官方 grammers-v4 中提供的语法定义：https://github.com/antlr/grammars-v4/blob/master/sql/mysql/&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;SQL貌似是常用编程语言中语法规则最复杂的&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="480" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-2" target="wCvZlQ1-VVe6W81RQQVx-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-2" target="wCvZlQ1-VVe6W81RQQVx-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="210" />
+              <mxPoint x="380" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-2" target="wCvZlQ1-VVe6W81RQQVx-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="210" />
+              <mxPoint x="380" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-2" target="wCvZlQ1-VVe6W81RQQVx-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="210" />
+              <mxPoint x="380" y="1260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-2" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;execute&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; : (select&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ... &lt;font color=&quot;#007fff&quot; style=&quot;font-size: 10px;&quot;&gt;//这里省略其他子规则&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; | delimiter&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ) (SEMI_ EOF? | EOF)&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; | EOF&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-4" value="MySQLStatement.g4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="80" y="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-5" target="wCvZlQ1-VVe6W81RQQVx-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-5" target="wCvZlQ1-VVe6W81RQQVx-68" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="210" />
+              <mxPoint x="620" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-5" target="wCvZlQ1-VVe6W81RQQVx-70" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-5" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;select&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; : queryExpression lockClauseList?&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; | queryExpressionParens&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; | selectWithInto&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//select语句语法规则&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="400" y="170" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-9" target="wCvZlQ1-VVe6W81RQQVx-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-9" target="wCvZlQ1-VVe6W81RQQVx-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-9" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;delimiter&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; : DELIMITER delimiterName&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//自定义分隔符的规则定义，&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;比如”delimiter $$“&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="401" y="920" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-12" value="DMLStatement.g4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="450" y="140" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-13" value="DALStatement.g4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="451" y="890" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-14" target="wCvZlQ1-VVe6W81RQQVx-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-14" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;DELIMITER&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; : D E L I M I T E R&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//即 ‘delimiter’ 不区分大小写&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="641" y="930" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-16" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;fragment A:&amp;nbsp; &amp;nbsp;[Aa];&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;...&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;font color=&quot;#007fff&quot;&gt;//省略其他定义&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;fragment UL_: &#39;_&#39;;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//frgament 定义的不是词法符号，但是可以被词法规则使用&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="881" y="930" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-18" target="wCvZlQ1-VVe6W81RQQVx-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-18" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;(SEMI_ EOF? | EOF)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//“分号+0或1个EOF”、“EOF”结尾&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="401" y="1130" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-21" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;SEMI_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&#39;;&#39;;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="641" y="1130" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-23" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;EOF&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="401" y="1230" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-26" target="wCvZlQ1-VVe6W81RQQVx-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-26" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;delimiterName&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; : textOrIdentifier | (&#39;\\&#39;. | ~(&#39;\&#39;&#39; | &#39;&quot;&#39; | &#39;`&#39; | &#39;\\&#39;))+&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot; style=&quot;font-size: 9px;&quot;&gt;//SQL分隔符可以是文本、标识符、转义后任意字符、除单引号、双引号、反引号、反斜杠之外任意字符&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="641" y="1020" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-29" target="wCvZlQ1-VVe6W81RQQVx-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-29" target="wCvZlQ1-VVe6W81RQQVx-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-29" target="wCvZlQ1-VVe6W81RQQVx-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-29" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;textOrIdentifier&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; : identifier | string_ | ipAddress&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//文本或标识符甚至IP地址&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="881" y="1030" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-31" target="wCvZlQ1-VVe6W81RQQVx-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-31" target="wCvZlQ1-VVe6W81RQQVx-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-31" target="wCvZlQ1-VVe6W81RQQVx-63" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-31" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;identifier&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : IDENTIFIER_&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;font color=&quot;#007fff&quot;&gt;//这条后面的规则都不推荐&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | identifierKeywordsUnambiguous&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | identifierKeywordsAmbiguous1RolesAndLabels&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | identifierKeywordsAmbiguous2Labels&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | identifierKeywordsAmbiguous3Roles&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | identifierKeywordsAmbiguous4SystemVariables&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | customKeyword&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | DOUBLE_QUOTED_TEXT&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | UNDERSCORE_CHARSET&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | BQUOTA_STRING&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot; color=&quot;#007fff&quot;&gt;//标识符规则定义，&lt;/font&gt;&lt;font color=&quot;#007fff&quot;&gt;标识符是SQL实体的名称，例如表、视图、列(字段)、模式、表别名、列别名、索引、存储过程、触发器或其他SQL实体。&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=3;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1121" y="1030" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-33" target="wCvZlQ1-VVe6W81RQQVx-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-33" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;string_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : DOUBLE_QUOTED_TEXT | SINGLE_QUOTED_TEXT&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;//文本规则定义&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1121" y="1270" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-35" target="wCvZlQ1-VVe6W81RQQVx-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-35" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;DOUBLE_QUOTED_TEXT&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : DQ_ ( &#39;\\&#39;. | &#39;&quot;&quot;&#39; | ~(&#39;&quot;&#39;| &#39;\\&#39;) )* DQ_&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;//双引号括住的文本&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1401" y="1270" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-38" target="wCvZlQ1-VVe6W81RQQVx-54" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-38" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;SINGLE_QUOTED_TEXT&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : SQ_ (&#39;\\&#39;. | &#39;\&#39;\&#39;&#39; | ~(&#39;\&#39;&#39; | &#39;\\&#39;))* SQ_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;//单引号括住的文本&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1401" y="1370" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-40" target="wCvZlQ1-VVe6W81RQQVx-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-40" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;ipAddress&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : IP_ADDRESS&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;//IP地址规则定义&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1121" y="1470" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-43" target="wCvZlQ1-VVe6W81RQQVx-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-43" target="wCvZlQ1-VVe6W81RQQVx-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-43" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;IP_ADDRESS&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : INT_NUM_&amp;nbsp; DOT_&amp;nbsp; INT_NUM_&amp;nbsp; DOT_ INT_NUM_&amp;nbsp; DOT_&amp;nbsp; INT_NUM_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1401" y="1470" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-45" target="wCvZlQ1-VVe6W81RQQVx-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-45" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;INT_NUM_&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : DIGIT+&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1641" y="1470" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-47" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;DOT_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;.&#39;;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1641" y="1570" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-50" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;fragment DIGIT&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : [0-9]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1881" y="1470" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-52" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;DQ_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&#39;&quot;&#39;;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1641" y="1270" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-54" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;SQ_ :&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;\&#39;&#39;;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1641" y="1370" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-56" target="wCvZlQ1-VVe6W81RQQVx-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-56" target="wCvZlQ1-VVe6W81RQQVx-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-56" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;queryExpression lockClauseList?&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="640" y="170" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-58" target="wCvZlQ1-VVe6W81RQQVx-60" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-58" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;IDENTIFIER_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : [A-Za-z_$0-9\u0080-\uFFFF]*?[A-Za-z_$\u0080-\uFFFF]+?[A-Za-z_$0-9\u0080-\uFFFF]*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | BQ_ ~&#39;`&#39;+ BQ_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;//规范的定义&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=3;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1401" y="1030" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-60" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;BQ_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&#39;`&#39;;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=3;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1641" y="1040" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-63" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;identifierKeywordsXxx&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&lt;font color=&quot;#007fff&quot;&gt;//这几条是说一些语言的关键字也可以作为标识符，注意不是SQL的关键字（SQL关键字不能直接作为标识符&lt;/font&gt;）&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=3;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1401" y="1150" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-66" target="wCvZlQ1-VVe6W81RQQVx-75" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-66" target="wCvZlQ1-VVe6W81RQQVx-77" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-66" target="wCvZlQ1-VVe6W81RQQVx-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-66" target="wCvZlQ1-VVe6W81RQQVx-85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-66" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;queryExpression&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : withClause? (queryExpressionBody | queryExpressionParens) orderByClause? limitClause?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="880" y="170" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-68" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;div&gt;&lt;b&gt;queryExpressionParens&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : LP_ (queryExpressionParens | queryExpression lockClauseList?) RP_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="640" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-70" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;selectWithInto&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; : LP_ selectWithInto RP_&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; | queryExpression selectIntoExpression lockClauseList?&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; | queryExpression lockClauseList selectIntoExpression&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="640" y="670" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-90" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-72" target="wCvZlQ1-VVe6W81RQQVx-89" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-72" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;lockClauseList&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : lockClause+&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//lock 子句列表&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="880" y="570" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-75" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;withClause&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : WITH RECURSIVE? cteClause (COMMA_ cteClause)*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//with子句，这个是可选的，很少使用，使用方法参考官方文档，这里暂略&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="170" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-77" target="wCvZlQ1-VVe6W81RQQVx-81" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-77" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;queryExpressionBody&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : queryPrimary&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | queryExpressionParens combineClause&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | queryExpressionBody combineClause&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//查询表达式主体&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-92" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-81" target="wCvZlQ1-VVe6W81RQQVx-91" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-81" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;queryPrimary&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : querySpecification&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | tableValueConstructor&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | tableStatement&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1360" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-83" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;orderByClause&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : ORDER BY orderByItem (COMMA_ orderByItem)*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//order by 子句&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="370" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-85" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;limitClause&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : LIMIT ((limitOffset COMMA_)? limitRowCount | limitRowCount OFFSET limitOffset)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//limit 子句&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="472.5" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-89" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;lockClause&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : FOR lockStrength tableLockingList? lockedRowAction?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | LOCK IN SHARE MODE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1120" y="570" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-91" target="wCvZlQ1-VVe6W81RQQVx-93" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-91" target="wCvZlQ1-VVe6W81RQQVx-99" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-91" target="wCvZlQ1-VVe6W81RQQVx-116" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="310" />
+              <mxPoint x="1820" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-91" target="wCvZlQ1-VVe6W81RQQVx-121" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-91" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;querySpecification&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : &lt;b&gt;SELECT&lt;/b&gt; selectSpecification* projections selectIntoExpression? fromClause? whereClause? groupByClause? havingClause? windowClause?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//select 标准实现&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1600" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-96" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-93" target="wCvZlQ1-VVe6W81RQQVx-95" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-93" value="&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;selectSpecification&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : duplicateSpecification | HIGH_PRIORITY | STRAIGHT_JOIN | SQL_SMALL_RESULT | SQL_BIG_RESULT | SQL_BUFFER_RESULT | SQL_NO_CACHE | SQL_CALC_FOUND_ROWS&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//select 语句的一些修饰符，详细参考MySQL文档&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1840" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-95" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;duplicateSpecification&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : ALL | DISTINCT | DISTINCTROW&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot; size=&quot;1&quot;&gt;//重复行返回标准，ALL虽然没有写过却是默认的，DISTINCROW 是 DISTINCT的同义词&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2080" y="270" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-102" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-99" target="wCvZlQ1-VVe6W81RQQVx-101" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-99" target="wCvZlQ1-VVe6W81RQQVx-105" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-99" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;projections&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : (unqualifiedShorthand | projection) (COMMA_ projection)*&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot; size=&quot;1&quot;&gt;//对应查询的列(可能包含逻辑运算符), 查询多个列以逗号分隔&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1840" y="370" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-101" target="wCvZlQ1-VVe6W81RQQVx-103" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-101" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;unqualifiedShorthand&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : ASTERISK_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;// * 被当作了不合格的速记符号&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2081" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-103" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;ASTERISK_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&#39;*&#39;;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2320" y="380" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-109" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-105" target="wCvZlQ1-VVe6W81RQQVx-108" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-105" target="wCvZlQ1-VVe6W81RQQVx-111" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-105" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;projection&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : expr (AS? alias)? | qualifiedShorthand&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//逻辑运算符或合格的速记符号&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2080" y="480" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0onSEbXszUpnJBJvr4U-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-108" target="Z0onSEbXszUpnJBJvr4U-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-108" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;expr&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : booleanPrimary&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | expr andOperator expr&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | expr orOperator expr&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | expr XOR expr&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | notOperator expr&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//AND,&amp;amp;&amp;amp;,OR,||,XOR,NOT,!&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2320" y="460" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-115" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-111" target="wCvZlQ1-VVe6W81RQQVx-114" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-111" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;qualifiedShorthand&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : (identifier DOT_)? identifier DOT_ASTERISK_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//标识符.*、标识符.标识符.*(库.表.列)&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2320" y="580" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-114" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;DOT_ASTERISK_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&#39;.*&#39;;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2560" y="580" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-116" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;b&gt;selectIntoExpression&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : INTO variable (COMMA_ variable )* | INTO DUMPFILE string_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | (INTO OUTFILE string_ (CHARACTER SET charsetName)?(COLUMNS selectFieldsInto+)? (LINES selectLinesInto+)?)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;// select ... into 语句，将查询结果保存到变量或文件&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;https://dev.mysql.com/doc/refman/8.0/en/select-into.html，暂略&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1831" y="660" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-124" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-121" target="wCvZlQ1-VVe6W81RQQVx-123" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-121" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;fromClause&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : FROM (DUAL | tableReferences)&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;// from子句，DUAL是个虚表，只是为了方便要求所有SELECT语句都应该有FORM和其他可能子句的人，像Oracle SELECT 必须有FROM&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1840" y="800" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-123" target="wCvZlQ1-VVe6W81RQQVx-125" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-123" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;tableReferences&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : tableReference (COMMA_ tableReference)*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2081" y="800" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-128" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-125" target="wCvZlQ1-VVe6W81RQQVx-127" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-125" target="wCvZlQ1-VVe6W81RQQVx-129" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-125" target="wCvZlQ1-VVe6W81RQQVx-135" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-125" target="wCvZlQ1-VVe6W81RQQVx-138" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-125" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;tableReference&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : (tableFactor | LBE_ OJ escapedTableReference RBE_) joinedTable*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//数据表引用，即表名、联结表、子查询&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2321" y="800" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-142" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-127" target="wCvZlQ1-VVe6W81RQQVx-141" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-145" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-127" target="wCvZlQ1-VVe6W81RQQVx-143" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0onSEbXszUpnJBJvr4U-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-127" target="wCvZlQ1-VVe6W81RQQVx-150" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-127" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;tableFactor&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : tableName partitionNames? (AS? alias)? indexHintList? | subquery AS? alias (LP_ columnNames RP_)? | LATERAL subquery AS? alias (LP_ columnNames RP_)? | LP_ tableReferences RP_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2561" y="800" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-129" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;LBE_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;{&#39;;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;RBE_:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &#39;}&#39;;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#007fff&quot; size=&quot;1&quot;&gt;// 大括号：brace&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2561" y="900" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-135" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;escapedTableReference&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : tableFactor joinedTable*&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2561" y="1000" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-138" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;joinedTable&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : innerJoinType tableReference joinSpecification?&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | outerJoinType tableReference joinSpecification&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | naturalJoinType tableFactor&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2561" y="1100" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-147" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-141" target="wCvZlQ1-VVe6W81RQQVx-146" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0onSEbXszUpnJBJvr4U-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wCvZlQ1-VVe6W81RQQVx-141" target="wCvZlQ1-VVe6W81RQQVx-148" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-141" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;tableName&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; : (owner DOT_)? name&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp; &amp;nbsp; ;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2800" y="800" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-143" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;partitionNames&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : PARTITION LP_ identifier (COMMA_ identifier)* RP_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//分区操作&amp;nbsp;&lt;/font&gt;&lt;font color=&quot;#007fff&quot;&gt;PARTITION()&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//小括号：parenthesis&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2800" y="900" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-146" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;owner&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : identifier&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="3040" y="800" width="199" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-148" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;name&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : identifier&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="3040" y="880" width="199" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wCvZlQ1-VVe6W81RQQVx-150" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;indexHintList&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : indexHint (COMMA_ indexHint)*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//分区操作&amp;nbsp;&lt;/font&gt;&lt;font color=&quot;#007fff&quot;&gt;PARTITION()&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#007fff&quot;&gt;//小括号：parenthesis&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=5;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2800" y="1000" width="199" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0onSEbXszUpnJBJvr4U-1" value="&lt;font style=&quot;font-size: 10px;&quot; color=&quot;#007fff&quot;&gt;比如下面语句加粗部分&lt;br&gt;select &lt;b&gt;*, category is not null as cy, &lt;br&gt;&amp;nbsp; ic.category as iccy &lt;/b&gt;&lt;br&gt;from infra_config as ic;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1841" y="450" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Z0onSEbXszUpnJBJvr4U-2" value="&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;div&gt;booleanPrimary&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; : booleanPrimary IS NOT? (TRUE | FALSE | UNKNOWN | NULL)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | booleanPrimary SAFE_EQ_ predicate&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | booleanPrimary MEMBER OF LP_ (expr) RP_&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | booleanPrimary comparisonOperator predicate&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | booleanPrimary comparisonOperator (ALL | ANY) subquery&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | booleanPrimary assignmentOperator predicate&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; | predicate&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot; color=&quot;#007fff&quot;&gt;//IS NOT, &amp;lt;=&amp;gt;,&amp;nbsp;&lt;/font&gt;&lt;font size=&quot;1&quot; color=&quot;#007fff&quot;&gt;MEMBER OF, =, &amp;gt;=, &amp;gt;, &amp;lt;=, &amp;lt;, &amp;lt;&amp;gt;, !=&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;arcSize=3;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="2560" y="380" width="200" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

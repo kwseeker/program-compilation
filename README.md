@@ -1,11 +1,17 @@
 # program-compilation
 程序编译原理相关工具、框架、场景与实践。
 
+文档：[docs](./docs)
+
++ [Antlr4](./docs/antlr4)
+
+
+
 ## Antlr4
 
 ### Antlr4基础
 
-使用文档：[Antlr4 docs](./antlr4-example/docs)
+参考文档：[Antlr4 docs](./docs/antlr4/antlr4.md)
 
 ### Antlr4应用场景
 
